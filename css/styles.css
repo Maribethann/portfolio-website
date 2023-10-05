@@ -1,0 +1,75 @@
+/*
+colours used:
+Primary (white) rgba (255, 255, 255, 0.0);
+Secondary (white smoke) rgba (247, 247, 247, 0.0);
+Text colour (ink) rgba (35, 35, 35, 0.0);
+*/
+body {
+    background-color: #FFFFFF ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* sets the font size to 16px*/
+    font-weight: 400; /* sets the font weight to 400*/
+    line-height: 1.6 /* sets the line height to 1.6 the font-size*/
+
+}
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.4;
+}
+h1 {
+    font-size: 2.50em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.25em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.75em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.35em;
+    font-weight: 400;
+}
+
+a {
+    color:#232323;
+    text-decoration: none; /*no underline*/
+}
+a:visted {
+    color:#a5a5a5
+}
+a:hover {
+    color:#303030;
+    opacity: 0.8;
+}
+a:focus {
+    color:#303030;
+    opacity: 0.8;
+    text-decoration: underline;
+}
+a:active {
+    color: #c77b1e
+}
+
+.button {
+    display: inline-block; /*since the <a> tag is in line by defauly, we need this to inline-b lock*/
+    background-color: #303030;
+    color: #ffffff; /* needed to override the default link colour*/
+    font-weight:400;
+    padding: 12px 24px;
+    border-radius: 12px;
+    transition: 0.2s opacity;
+}
+.button:hover {
+    color: #ffffff; /* needed to override the default link colour*/
+    opacity: 0.8; /*reduces the opacity of the button to 80%*/
+    text-decoration: none;
+}
