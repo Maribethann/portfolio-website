@@ -11,6 +11,9 @@ html {
     font-size: 62.5%;
 }
 
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #FFFFFF ;
     font-family: 'Poppins', sans-serif;
@@ -26,6 +29,7 @@ img {
 
 h1, h2, h3, h4 {
     line-height: 1.4;
+    margin: 0;
 }
 h1 {
     font-size: 3.2rem;
@@ -88,7 +92,7 @@ a:active {
 }
 nav selector {
     display: inline-block;
-    width: 100%;
+    width: auto;
 }
 nav a {
     text-decoration: none;
@@ -96,6 +100,7 @@ nav a {
 nav > ul {
     list-style-type: none;
     padding: 0;
+    margin: 0
 }
 nav > ul > li {
     display: inline-block;
@@ -108,11 +113,14 @@ nav > ul > li > a {
 }
 header {
     background-color: #f7f7f7;
-    padding: 8px;
+    padding: 8px 0;
     text-align: center;
     box-shadow: 5px 5px 10px #30303040;
-    position: fixed;
-    width: 100%;
+    z-index: 999;
+    border-bottom: #fff 3px solid;
+}
+header .container {
+    gap: 1.6rem;
 }
 
 .logo {
@@ -127,20 +135,84 @@ styles applied in 1.7
 ====================================================*/
 
 /* Layout Styling */
-
+.section {
+    padding: 4.8rem 0;
+}
 .container {
     padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section.project .container {
+    gap: 2.4rem;
+}
+.section.project .row {
+    gap: 0.8rem;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .column {
-    margin: 24px 0; /* 24px top and bottom, 0 left and right */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#intro h1 {
+#intro {
     text-align: center;
     background-color:#f7f7f7;
-    padding: 0;
-    display: inline-block;
-    width: 100%;
+
 }
-main {
-    padding-top: 100px;
+#intro h1 span {
+    display: block;
+    font-size: 2.0rem;
+    margin-top: 2.4rem;
+}
+
+/*==================================================
+footer styling
+====================================================*/
+.social a {
+    text-decoration: none;
+}
+
+/*==================================================
+styles applied in 1.8
+====================================================*/
+
+/*==================================================
+medium devices (640px and larger)
+====================================================*/
+@media only screen and (min-width: 640px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .section.project .row {
+        flex-direction: row;
+        gap: 3rem;
+    }
+    .section.project .column {
+        width: 50%;
+    }
+}   
+/*==================================================
+large devices (1024px or larger)
+====================================================*/
+@media only screen and (min-width: 1024px) {
+
+}
+/*==================================================
+x-large devices (1440px or larger)
+====================================================*/
+@media only screen and (min-width: 1440px) {
+
+}
+/*==================================================
+xx-large devices (1920px or larger)
+====================================================*/
+@media only screen and (min-width: 1920px) {
+
 }
