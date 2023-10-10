@@ -4,12 +4,20 @@ Primary (white) rgba (255, 255, 255, 0.0);
 Secondary (white smoke) rgba (247, 247, 247, 0.0);
 Text colour (ink) rgba (35, 35, 35, 0.0);
 */
+/*==================================================
+gobal styles
+====================================================*/
+html {
+    font-size: 62.5%;
+}
+
 body {
     background-color: #FFFFFF ;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px; /* sets the font size to 16px*/
+    font-size: 1.6rem; /* sets the font size to 16px*/
     font-weight: 400; /* sets the font weight to 400*/
-    line-height: 1.6 /* sets the line height to 1.6 the font-size*/
+    line-height: 1.6; /* sets the line height to 1.6 the font-size*/
+    color: #303030;
 
 }
 img {
@@ -20,43 +28,39 @@ h1, h2, h3, h4 {
     line-height: 1.4;
 }
 h1 {
-    font-size: 2.50em;
+    font-size: 3.2rem;
     font-weight: 600;
 }
 
 h2 {
-    font-size: 2.25em;
+    font-size: 2.8rem;
     font-weight: 600;
 }
 
 h3 {
-    font-size: 1.75em;
+    font-size: 2.4rem;
     font-weight: 400;
 }
 
 h4 {
-    font-size: 1.35em;
+    font-size: 2rem;
     font-weight: 400;
 }
 
 a {
-    color:#232323;
-    text-decoration: none; /*no underline*/
+    color:#303030;
 }
-a:visted {
-    color:#a5a5a5
+a:visited {
+    color:#303030;
 }
 a:hover {
-    color:#303030;
-    opacity: 0.8;
+    color:#30303099;
 }
 a:focus {
-    color:#303030;
-    opacity: 0.8;
-    text-decoration: underline;
+    color:#30303099;
 }
 a:active {
-    color: #c77b1e
+    color: #30303099;
 }
 
 .button {
@@ -67,9 +71,75 @@ a:active {
     padding: 12px 24px;
     border-radius: 12px;
     transition: 0.2s opacity;
+    text-decoration: none;
+}
+.button:visited {
+    color: #ffffff;
 }
 .button:hover {
-    color: #ffffff; /* needed to override the default link colour*/
-    opacity: 0.8; /*reduces the opacity of the button to 80%*/
+    color: #ffffffcc; /* needed to override the default link colour*/
+    opacity: 0.8;
+}
+.button:focus {
+    color: #ffffffcc;
+}
+.button:active {
+    color:#ffffffcc
+}
+nav selector {
+    display: inline-block;
+    width: 100%;
+}
+nav a {
     text-decoration: none;
+}
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav > ul > li {
+    display: inline-block;
+}
+nav > ul > li > a {
+    padding: 0 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color:#303030
+}
+header {
+    background-color: #f7f7f7;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 5px 5px 10px #30303040;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 600;
+    max-width: 250px;
+ }
+
+/*==================================================
+styles applied in 1.7
+====================================================*/
+
+/* Layout Styling */
+#intro h1 {
+    text-align: center;
+    background-color:#f7f7f7;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+main {
+    padding-top: 128px;
+}
+.container {
+    padding: 0 16px;
+}
+.column {
+    margin: 24px 0; /* 24px top and bottom, 0 left and right */
 }
