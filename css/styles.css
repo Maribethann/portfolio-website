@@ -29,7 +29,7 @@ img {
 
 h1, h2, h3, h4 {
     line-height: 1.4;
-    margin: 0;
+    margin: 1.6rem 0;
 }
 h1 {
     font-size: 3.2rem;
@@ -42,8 +42,9 @@ h2 {
 }
 
 h3 {
-    font-size: 2.4rem;
-    font-weight: 400;
+    font-size: 2.0rem;
+    font-weight: 500;
+    color: #585858;
 }
 
 h4 {
@@ -112,12 +113,10 @@ nav > ul > li > a {
     color:#303030
 }
 header {
-    background-color: #f7f7f7;
-    padding: 8px 0;
+    background-color: #f0f0f0;
+    padding: 1.6rem 0;
     text-align: center;
-    box-shadow: 5px 5px 10px #30303040;
-    z-index: 999;
-    border-bottom: #fff 3px solid;
+    /*border-bottom: #30303099 1pt solid;*/
 }
 header .container {
     gap: 1.6rem;
@@ -136,19 +135,24 @@ styles applied in 1.7
 
 /* Layout Styling */
 .section {
-    padding: 4.8rem 0;
+    padding: 3.2rem 0 0 0;
+
 }
 .container {
-    padding: 0 16px;
+    padding: 0 1.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.thanks-container a {
+    margin: 3.2rem 1.6rem ;
+
+}
 .section.project .container {
-    gap: 2.4rem;
+    gap: 6.4rem;
 }
 .section.project .row {
-    gap: 0.8rem;
+    gap: 1.6rem;
 }
 .row {
     display: flex;
@@ -158,22 +162,44 @@ styles applied in 1.7
 .column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 #intro {
-    text-align: center;
+    text-align: flex-start;
     background-color:#f7f7f7;
 
 }
+
 #intro h1 span {
     display: block;
     font-size: 2.0rem;
-    margin-top: 2.4rem;
+    margin-top: 3.2rem;
+}
+.row.process {
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    color:#0a7362
 }
 
+.row .row-final-designs {
+    display: flex;
+    flex-direction: row;
+    overflow: auto; /* is there a way to get it to move just the container and not the whole screen? */
+    gap: 2rem;
+    max-width: 100%;
+}
+.row .row-final-designs picture {
+    min-width: 30rem;
+}
 /*==================================================
 footer styling
 ====================================================*/
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 3.2rem;
+}
 .social a {
     text-decoration: none;
 }
@@ -192,7 +218,7 @@ medium devices (640px and larger)
     }
     .section.project .row {
         flex-direction: row;
-        gap: 3rem;
+        gap: 3.2rem;
     }
     .section.project .column {
         width: 50%;
