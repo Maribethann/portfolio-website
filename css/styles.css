@@ -21,15 +21,19 @@ body {
     font-weight: 400; /* sets the font weight to 400*/
     line-height: 1.6; /* sets the line height to 1.6 the font-size*/
     color: #303030;
-
 }
+
 img {
     width: 100%;
 }
 
+/*==================================================
+heading styles
+====================================================*/
+
 h1, h2, h3, h4 {
     line-height: 1.4;
-    margin: 1.6rem 0;
+    /*margin: 1.6rem;*/
 }
 h1 {
     font-size: 3.2rem;
@@ -51,6 +55,10 @@ h4 {
     font-size: 2rem;
     font-weight: 400;
 }
+
+/*==================================================
+a links and button styles
+====================================================*/
 
 a {
     color:#303030;
@@ -77,6 +85,7 @@ a:active {
     border-radius: 12px;
     transition: 0.2s opacity;
     text-decoration: none;
+    margin: 4rem;
 }
 .button:visited {
     color: #ffffff;
@@ -91,6 +100,11 @@ a:active {
 .button:active {
     color:#ffffffcc
 }
+
+/*==================================================
+header and navigation styles
+====================================================*/
+
 nav selector {
     display: inline-block;
     width: auto;
@@ -130,44 +144,46 @@ header .container {
  }
 
 /*==================================================
-styles applied in 1.7
+general element styles
 ====================================================*/
 
 /* Layout Styling */
 .section {
-    padding: 3.2rem 0 0 0;
-
+    padding: 0 0 0 0;
 }
+
 .container {
     padding: 0 1.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.thanks-container a {
-    margin: 3.2rem 1.6rem ;
 
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/*==================================================
+element specific styles 
+====================================================*/
+
 .section.project .container {
     gap: 6.4rem;
 }
 .section.project .row {
     gap: 1.6rem;
 }
-.row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+
 #intro {
     text-align: flex-start;
     background-color:#f7f7f7;
-
 }
 
 #intro h1 span {
@@ -175,26 +191,40 @@ styles applied in 1.7
     font-size: 2.0rem;
     margin-top: 3.2rem;
 }
+
+.container .story a {
+    align-items: center;
+}
+
+.column scope {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .row.process {
     display: flex;
     flex-direction: row;
+    align-content: center;
     font-weight: 500;
     color:#0a7362
 }
-
 .row .row-final-designs {
     display: flex;
     flex-direction: row;
-    overflow: auto; /* is there a way to get it to move just the container and not the whole screen? */
+    overflow: auto; 
     gap: 2rem;
-    max-width: 100%;
+    max-width: 100vw;
+    padding: 0 1.6rem;
 }
 .row .row-final-designs picture {
-    min-width: 30rem;
+    min-width: 87vw;
 }
+
 /*==================================================
-footer styling
+footer styles
 ====================================================*/
+
 footer {
     background-color: #f0f0f0;
     text-align: center;
@@ -203,10 +233,11 @@ footer {
 .social a {
     text-decoration: none;
 }
-
-/*==================================================
-styles applied in 1.8
-====================================================*/
+.social {
+    display: flex;
+    gap: 3.2rem;
+    margin: 2.8rem;
+}
 
 /*==================================================
 medium devices (640px and larger)
