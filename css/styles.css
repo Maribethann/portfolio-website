@@ -25,15 +25,19 @@ body {
 
 img {
     width: 100%;
+    padding: 0 1.6rem;
+}
+picture {
+    padding: 2.4rem 0 0 0;
 }
 
 /*==================================================
-heading styles
+text styles
 ====================================================*/
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p{
     line-height: 1.4;
-    /*margin: 1.6rem;*/
+    margin: 1.6rem;
 }
 h1 {
     font-size: 3.2rem;
@@ -55,7 +59,10 @@ h4 {
     font-size: 2rem;
     font-weight: 400;
 }
-
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
 /*==================================================
 a links and button styles
 ====================================================*/
@@ -81,12 +88,13 @@ a:active {
     background-color: #303030;
     color: #ffffff; /* needed to override the default link colour*/
     font-weight:400;
-    padding: 12px 24px;
-    border-radius: 12px;
-    transition: 0.2s opacity;
+    padding: 1.2rem 2.4rem;
+    border-radius: 1.2rem;
     text-decoration: none;
-    margin: 4rem;
+    margin: 4rem auto;
+    transition: 0.2s opacity;
 }
+
 .button:visited {
     color: #ffffff;
 }
@@ -128,9 +136,7 @@ nav > ul > li > a {
 }
 header {
     background-color: #f0f0f0;
-    padding: 1.6rem 0;
     text-align: center;
-    /*border-bottom: #30303099 1pt solid;*/
 }
 header .container {
     gap: 1.6rem;
@@ -149,11 +155,10 @@ general element styles
 
 /* Layout Styling */
 .section {
-    padding: 0 0 0 0;
+    padding: 4rem 0;
 }
 
 .container {
-    padding: 0 1.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,7 +180,7 @@ element specific styles
 ====================================================*/
 
 .section.project .container {
-    gap: 6.4rem;
+    gap: 2.4.rem;
 }
 .section.project .row {
     gap: 1.6rem;
@@ -192,23 +197,44 @@ element specific styles
     margin-top: 3.2rem;
 }
 
-.container .story a {
-    align-items: center;
+.container.nav {
+    margin-bottom: 0;
+    padding: 1.6rem;
 }
-
 .column scope {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+.column.scope p {
+    font-weight: 500;
+    color: #0a7362;
+}
 
+.column .process_arrow-block {
+    align-content: center;
+}
+.process_image-block {
+    align-items: center;
+}
+.container.about {
+    margin-bottom: 0;
+}
+.container.story {
+    display: flex;
+    margin: 0 auto;
+
+}
 .row.process {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    font-weight: 500;
-    color:#0a7362
+    align-items: center;
 }
+.row.process p {
+    font-weight: 500;
+    color:#0a7362;
+}
+
 .row .row-final-designs {
     display: flex;
     flex-direction: row;
@@ -216,9 +242,16 @@ element specific styles
     gap: 2rem;
     max-width: 100vw;
     padding: 0 1.6rem;
+    margin-top: 2.4rem;
 }
 .row .row-final-designs picture {
-    min-width: 87vw;
+    min-width: 300px;
+}
+.takeaways h3 {
+    color: #0a7362;
+}
+.row.challenge h3 {
+    color: #0a7362
 }
 
 /*==================================================
@@ -229,6 +262,10 @@ footer {
     background-color: #f0f0f0;
     text-align: center;
     padding: 3.2rem;
+
+}
+footer .container {
+    margin: 0;
 }
 .social a {
     text-decoration: none;
@@ -239,6 +276,37 @@ footer {
     margin: 2.8rem;
 }
 
+/*==================================================
+animation styles
+====================================================*/
+
+.berlin-illustration {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+@keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+}
+@keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to {transform: translate(100px, 48px);}
+}
+.sun {
+    animation: 30s color-change infinite alternate linear;
+}
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
 /*==================================================
 medium devices (640px and larger)
 ====================================================*/
@@ -252,14 +320,55 @@ medium devices (640px and larger)
         gap: 3.2rem;
     }
     .section.project .column {
-        width: 50%;
+        width: 60% 40%;
+    }   
+    .row.challenge {
+        flex-direction: row;
+        gap: 3.2rem;
     }
-}   
+    .row .skills {
+        flex-direction: row;
+        gap: 3.2rem;
+    }
+    .challenge .column:first-child {
+        width: 70%;
+    }
+    .challenge .column:last-child {
+        width: 30%;
+    }
+    #intro p {
+        text-align: center;
+        max-width: 50rem;
+    }
+    #intro h1 span {
+        text-align: center;
+    }
+    .container {
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+    .row.takeaways {
+        flex-direction: row;
+        gap: 1.6rem;
+        width: 100%;
+    }
+    .takeaways .column {
+        width: 33.33%;
+    }
+
+}
 /*==================================================
 large devices (1024px or larger)
 ====================================================*/
 @media only screen and (min-width: 1024px) {
-
+   
+    .container {
+        margin-bottom: 10rem;
+    }
+    .section.project .column {
+        width: 70% 30%;
+    }
+    
 }
 /*==================================================
 x-large devices (1440px or larger)
