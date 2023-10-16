@@ -307,6 +307,7 @@ animation styles
 .cloud-back {
     animation: 34s cloud-move-reverse infinite alternate linear;
 }
+
 /*==================================================
 medium devices (640px and larger)
 ====================================================*/
