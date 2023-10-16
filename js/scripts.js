@@ -1,0 +1,1 @@
+console.log('Hey there! Welcome to my little corner of the internet.')
