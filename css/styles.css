@@ -9,6 +9,7 @@ gobal styles
 ====================================================*/
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -37,7 +38,8 @@ text styles
 
 h1, h2, h3, h4, p{
     line-height: 1.4;
-    margin: 1.6rem;
+    margin: 1.6rem 0;
+    padding: 0 1.6rem;
 }
 h1 {
     font-size: 3.2rem;
@@ -123,10 +125,7 @@ nav a {
 nav > ul {
     list-style-type: none;
     padding: 0;
-    margin: 0
-}
-nav > ul > li {
-    display: inline-block;
+    margin: 0;
 }
 nav > ul > li > a {
     padding: 0 16px;
@@ -134,21 +133,42 @@ nav > ul > li > a {
     font-weight: 300;
     color:#303030
 }
+.navtoggle li:not(:last-child) {
+    display: none;
+}
+.navtoggle, .navtoggle.responsive {
+    position: relative;
+    width: 100%;
+}
+.navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: .2rem;
+    font-size: 2rem;
+    padding-right: 0;
+}
+.navtoggle.responsive nav {
+    padding: 1.6rem 0 0;
+}
+.navtoggle.responsive li {
+    display: block;
+    padding: 1.2rem 0 0 0;
+}
+.navtoggle.responsive li:last-child {
+    padding: 0 0 1.2rem;
+}
 header {
     background-color: #f0f0f0;
-    text-align: center;
 }
 header .container {
     gap: 1.6rem;
 }
-
 .logo {
     text-decoration: none;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    max-width: 250px;
- }
-
+    max-width: 150px;
+}
 /*==================================================
 general element styles
 ====================================================*/
@@ -180,23 +200,19 @@ element specific styles
 ====================================================*/
 
 .section.project .container {
-    gap: 2.4.rem;
+    gap: 2.4rem;
 }
 .section.project .row {
     gap: 1.6rem;
 }
-
 #intro {
-    text-align: flex-start;
     background-color:#f7f7f7;
 }
-
 #intro h1 span {
     display: block;
     font-size: 2.0rem;
     margin-top: 3.2rem;
 }
-
 .container.nav {
     margin-bottom: 0;
     padding: 1.6rem;
@@ -210,7 +226,6 @@ element specific styles
     font-weight: 500;
     color: #0a7362;
 }
-
 .column .process_arrow-block {
     align-content: center;
 }
@@ -223,7 +238,6 @@ element specific styles
 .container.story {
     display: flex;
     margin: 0 auto;
-
 }
 .row.process {
     display: flex;
@@ -234,7 +248,6 @@ element specific styles
     font-weight: 500;
     color:#0a7362;
 }
-
 .row .row-final-designs {
     display: flex;
     flex-direction: row;
@@ -284,6 +297,7 @@ animation styles
     width: 100%;
     max-width: 100%;
     height: auto;
+    padding: 0 1.6rem;
 }
 @keyframes color-change {
     0% {fill: #edc655;}
@@ -316,6 +330,22 @@ medium devices (640px and larger)
         flex-direction: row;
         justify-content: space-between;
     }
+    .nav > ul {
+        margin: 1em;
+    }
+    .nav > ul > li {
+        display: inline-block;
+    }
+    .navtoggle li:not(:last-child) {
+        display: inline-block
+    }
+    .navtoggle li:last-child {
+        display: none;
+    }
+    .logo {
+        font-size: 2.4rem;
+        max-width: 250px;
+     }
     .section.project .row {
         flex-direction: row;
         gap: 3.2rem;
@@ -356,7 +386,8 @@ medium devices (640px and larger)
     .takeaways .column {
         width: 33.33%;
     }
-
+    
+    
 }
 /*==================================================
 large devices (1024px or larger)
