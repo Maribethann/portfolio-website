@@ -397,6 +397,12 @@ medium devices (640px and larger)
     display: inline-block;
   }
 
+  .navtoggle {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+  }
+
   .navtoggle li:not(:last-child) {
     display: inline-block;
   }
@@ -416,7 +422,7 @@ medium devices (640px and larger)
   }
 
   .section.project .column {
-    width: 60% 40%;
+    width: 60%;
   }
 
   .row.challenge {
@@ -472,7 +478,7 @@ large devices (1024px or larger)
   }
 
   .section.project .column {
-    width: 70% 30%;
+    width: 70%;
   }
 }
 
