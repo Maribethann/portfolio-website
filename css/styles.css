@@ -36,6 +36,9 @@ picture {
   padding: 2.4rem 0 0;
 }
 
+.profile-image {
+  width: 100%;
+}
 /* ==================================================
 text styles
 ==================================================== */
@@ -129,6 +132,24 @@ a:active {
   color: #fffc;
 }
 
+.clickable {
+  position: relative;
+}
+
+.clickable a:after {
+  content: "";
+  display: block !IMPORTANT;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  }
+
+.clickable a {
+  text-decoration: none;
+}
 /* ==================================================
 header and navigation styles
 ==================================================== */
@@ -326,10 +347,6 @@ footer {
   padding: 3.2rem;
 }
 
-footer .container {
-  margin: 0;
-}
-
 .social a {
   text-decoration: none;
 }
@@ -465,6 +482,16 @@ medium devices (640px and larger)
 
   .takeaways .column {
     width: 33.33%;
+  }
+
+  .profile-image {
+    height: 400px;
+  }
+
+  .profile-image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 69%;
   }
 }
 
